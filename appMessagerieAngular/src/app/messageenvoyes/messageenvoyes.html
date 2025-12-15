@@ -1,0 +1,22 @@
+<h4 class="mb-4">Messages envoyé</h4>
+<div class="list-group">
+  <!-- Exemple d'email -->
+
+  <div
+    *ngFor="let m of messages"
+    class="list-group-item list-group-item-action email-item d-flex justify-content-between align-items-start"
+  >
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">{{ m.sujet }}</div>
+      <p class="mb-1 text-muted small">{{ m.contenu }}</p>
+      <small class="text-muted">{{ m.userreceive.nom }}</small>
+    </div>
+    <div class="text-end">
+      <small class="text-muted">Hier</small><br />
+      <button class="btn btn-outline-primary btn-sm mt-2"><i class="fas fa-eye"></i> Voir</button>
+      <button class="btn btn-outline-danger btn-sm mt-2">
+        <i class="fas fa-trash"></i> Supprimer
+      </button>
+    </div>
+  </div>
+</div>

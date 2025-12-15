@@ -1,0 +1,20 @@
+.sidebar {
+  background-color: #f8f9fa;
+  height: 100vh;
+}
+.sidebar .list-group-item {
+  border: none;
+}
+.sidebar .list-group-item:hover {
+  background-color: #e2e6ea;
+}
+.email-list {
+  height: 100vh;
+  overflow-y: auto;
+}
+.email-item {
+  transition: background-color 0.3s ease;
+}
+.email-item:hover {
+  background-color: #f1f3f5;
+}

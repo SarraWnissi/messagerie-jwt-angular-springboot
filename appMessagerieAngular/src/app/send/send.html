@@ -1,0 +1,41 @@
+<h4 class="mb-4">Envoyer un nouveau message</h4>
+
+<form (ngSubmit)="send()">
+  <div class="mb-3">
+    <label for="recipient" class="form-label">Destinataire</label>
+    <select name="userreceive" [(ngModel)]="message.userreceive" class="form-select" required>
+      <option *ngFor="let u of users" [ngValue]="u">
+        {{ u.nom }}
+      </option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="subject" class="form-label">Sujet</label>
+    <input
+      type="text"
+      name="sujet"
+      [(ngModel)]="message.sujet"
+      class="form-control"
+      id="subject"
+      placeholder="Sujet de l'email"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="message" class="form-label">Message</label>
+    <textarea
+      name="contenu"
+      [(ngModel)]="message.contenu"
+      class="form-control"
+      id="message"
+      rows="8"
+      placeholder="Écrivez votre message ici..."
+      required
+    ></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Envoyer</button>
+  <button type="reset" class="btn btn-secondary">Réinitialiser</button>
+</form>
